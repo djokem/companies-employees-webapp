@@ -1,0 +1,22 @@
+version: '3'
+services:
+    client:
+        depends_on:
+            - server
+        build:
+            context: ./frontend/
+            dockerfile: ./Dockerfile
+        command: npm start
+        volumes:
+            - ./frontend/:/usr/app
+            - /usr/app/node_modules
+        ports:
+            - '${CLIENT_PORT}:4200'
+    server:
+        build:
+            context: ./backend/
+            dockerfile: ./Dockerfile
+        ports:
+            - '${SERVER_PORT}:8080'
+        volumes:
+            - ./backend/:/usr/app

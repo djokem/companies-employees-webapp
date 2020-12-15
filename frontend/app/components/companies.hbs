@@ -1,0 +1,12 @@
+<Jumbo>
+  <h2>List of Companies</h2>
+</Jumbo>
+<div class="rentals">
+    <ul class="results1">
+        {{#each @companies as |company|}}
+            <li><Company @company={{company}} /></li>
+        {{else}}
+            No companies exist.
+        {{/each}}
+    </ul>
+</div>

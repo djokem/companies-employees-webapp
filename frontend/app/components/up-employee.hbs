@@ -1,0 +1,38 @@
+<div class="rentals1">
+    <label>
+        <div>
+            <span>Name:</span>
+            <Input @value={{@employee.name}} class="light" />
+        </div>
+        <div>
+            <span>Surname:</span>
+            <Input @value={{@employee.surname}} class="light" />
+        </div>
+        <div>
+            <span>Email:</span>
+            <Input @value={{@employee.email}} class="light" />
+        </div>
+        <div>
+            <span>Address:</span>
+            <Input @value={{@employee.address}} class="light" />
+        </div>
+        <div>
+            <span>Salary:</span>
+            <Input @value={{@employee.salary}} class="light" />  
+        </div>
+    </label>
+    <label>
+        <span>      
+                <button type="button" class="button1 up" {{on 'click' (fn this.update @employee)}}>
+                    Update Employee
+                </button>
+        </span>
+    </label>
+        <label>
+            <span>
+                <button type="button" class="button1 del" {{on 'click' this.cancel}}>
+                    Cancel
+                </button>
+            </span>
+        </label>
+</div>  

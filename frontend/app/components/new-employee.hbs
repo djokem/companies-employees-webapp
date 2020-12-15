@@ -1,0 +1,42 @@
+<div class="rentals1">
+    {{#if this.add}}
+    <label>
+        <div>
+            <span>Name:</span>
+            <Input @value={{this.name}} class="light" />
+        </div>
+        <div>
+            <span>Surname:</span>
+            <Input @value={{this.surname}} class="light" />
+        </div>
+        <div>
+            <span>Email:</span>
+            <Input @value={{this.email}} class="light" />
+        </div>
+        <div>
+            <span>Address:</span>
+            <Input @value={{this.address}} class="light" />
+        </div>
+        <div>
+            <span>Salary:</span>
+            <Input @value={{this.salary}} class="light" />  
+        </div>
+    </label>
+    {{/if}}
+    <label>
+        <span>        
+            <button type="button" class="button1 add"  {{on 'click' (fn this.addFlag @company_id)}}>
+                Add Employee
+            </button>
+        </span>
+    </label>
+        {{#if this.add}}
+        <label>
+            <span>
+                <button type="button" class="button1 del"  {{on 'click' this.cancel}}>
+                    Cancel
+                </button>
+            </span>
+        </label>
+        {{/if}}
+</div>  
